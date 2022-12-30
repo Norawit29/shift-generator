@@ -1,0 +1,24 @@
+body {
+    background-color: #F9F7F7;
+    color: White;
+    padding: 120px;
+}
+
+h1 {
+    color: #112D4E;
+    text-align: center;
+    font-size: 50px;
+    padding: 50px;
+}
+
+p {
+    color: #112D4E;
+    text-align: center;
+    font-size: 30px;
+    padding: 30px;
+}
+
+.to_app{
+    text-align: center;
+}
+
