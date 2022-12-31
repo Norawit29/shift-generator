@@ -251,4 +251,5 @@ app.add_url_rule('/shift_form',
 app.add_url_rule('/result',
                  view_func=ResultPage.as_view('result_page'))
 
-app.run(host='0.0.0.0', port=port, debug=True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=port, debug=True)
