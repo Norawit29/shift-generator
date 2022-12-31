@@ -242,7 +242,7 @@ class ResultPage(MethodView):
     def get(self):
         return render_template('result.html')
 
-port = int(os.environ.get('PORT', 5000))
+port = int(os.environ.get('PORT', 8000))
 
 app.add_url_rule('/',
                  view_func=HomePage.as_view('home_page'))
