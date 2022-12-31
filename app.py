@@ -3,7 +3,7 @@ from shift_generate import ShiftGenerator
 from flask import Flask, render_template, request, make_response
 from flask.views import MethodView
 from wtforms import Form, StringField, SubmitField
-
+import os
 
 app = Flask(__name__)
 
@@ -242,6 +242,7 @@ class ResultPage(MethodView):
     def get(self):
         return render_template('result.html')
 
+port = int(os.environ.get('PORT', 5000))
 
 app.add_url_rule('/',
                  view_func=HomePage.as_view('home_page'))
@@ -250,4 +251,4 @@ app.add_url_rule('/shift_form',
 app.add_url_rule('/result',
                  view_func=ResultPage.as_view('result_page'))
 
-app.run(debug=True)
+app.run(host='0.0.0.0', port=port, debug=True)
